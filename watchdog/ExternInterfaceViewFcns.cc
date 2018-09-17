@@ -47,13 +47,14 @@ bool is_debug(){
 unordered_map<string, double> fdirDict;
 
 void fdir_init_config(){
-	//cout<<"Reading file";
-  ifstream fin("../config.cfg");
+	cout<<"Reading file"<<endl;
+  ifstream fin("/home/taste/esrocos_workspace/plex/mc_watchdog/config.cfg");
   for (string line ; getline(fin, line); ) {
     istringstream ssin(line);
     string name, sep;
     double val;
     ssin >> name >> sep >> val;
+    cout << name <<", "<<sep<<", "<<val<<endl;
 
     if (name != "" && name[0] != '#') 
       fdirDict[name] = val;

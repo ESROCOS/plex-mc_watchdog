@@ -1,1 +1,1 @@
-<package><depend package="types/base" /></package>
+<package><depend package="types/base" /><depend package="control/mc_watchdog" /><depend package="base/types" /></package>

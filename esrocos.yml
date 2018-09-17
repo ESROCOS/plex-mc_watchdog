@@ -3,4 +3,5 @@ PROJECT_NAME: mc_watchdog
 deps:
 - types/base: ''
 - control/mc_watchdog: ''
+- base/types: ''
 

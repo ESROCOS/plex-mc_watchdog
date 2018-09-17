@@ -32,7 +32,7 @@ esrocos_init()
 
 #uncomment if you want to add dependencies for the build process (only required in integration projects)
 esrocos_add_dependency(PARTITION x86_partition
-	                   MODULES "mc_watchdog_bip")
+	                   MODULES mc_watchdog_bip base-types)
 
 ########### FOR COMPONENT PROJECTS ################
 
