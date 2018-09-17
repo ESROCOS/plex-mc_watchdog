@@ -13,6 +13,8 @@ WITH Taste;
 WITH DataView;
 WITH TASTE_IV_Properties;
 SUBPROGRAM PI_purge
+PROPERTIES
+  Taste::Associated_Queue_Size => 1;
 END PI_purge;
 
 SUBPROGRAM IMPLEMENTATION PI_purge.others
@@ -49,7 +51,7 @@ FEATURES
   PI_purge : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::Watchdog::PI_purge.others {
     Taste::coordinates => "131353 55309";
     Taste::RCMoperationKind => cyclic;
-    Taste::RCMperiod => 1000 ms;
+    Taste::RCMperiod => 80 ms;
     Taste::Deadline => 0 ms;
     Taste::InterfaceName => "purge";
   };
@@ -141,12 +143,12 @@ FEATURES
     Taste::encoding => NATIVE;
   };
 PROPERTIES
-  Taste::Associated_Queue_Size => 1;
+  Taste::Associated_Queue_Size => 5;
 END PI_mo_cmd;
 
 SUBPROGRAM IMPLEMENTATION PI_mo_cmd.others
 PROPERTIES
-  Compute_Execution_Time => 0 ms .. 0 ms;
+  Compute_Execution_Time => 0 ms .. 30 ms;
 END PI_mo_cmd.others;
 
 SYSTEM dummy_consumer
@@ -154,8 +156,8 @@ FEATURES
   PI_mo_cmd : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::dummy_consumer::PI_mo_cmd.others {
     Taste::coordinates => "188110 56317";
     Taste::RCMoperationKind => sporadic;
-    Taste::RCMperiod => 0 ms;
-    Taste::Deadline => 0 ms;
+    Taste::RCMperiod => 100 ms;
+    Taste::Deadline => 50 ms;
     Taste::InterfaceName => "mo_cmd";
   };
 PROPERTIES
