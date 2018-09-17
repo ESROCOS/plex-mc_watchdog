@@ -1,0 +1,7 @@
+#ORCHESTRATOR_OPTIONS+=" --no-retry"
+#ORCHESTRATOR_OPTIONS+=" -e x86_partition:/home/taste/esrocos_workspace/control/mc_watchdog-orig/BipModel/include"
+#ORCHESTRATOR_OPTIONS+=" -e x86_partition:/home/taste/esrocos_workspace/control/mc_watchdog-orig/BipEngine/include/generic"
+#ORCHESTRATOR_OPTIONS+=" -e x86_partition:/home/taste/esrocos_workspace/control/mc_watchdog-orig/BipEngine/include/specific"
+#ORCHESTRATOR_OPTIONS+=" -l x86_partition:/home/taste/esrocos_workspace/control/mc_watchdog-orig/BipModel/lib/libpack__InterfaceView.a"
+#ORCHESTRATOR_OPTIONS+=" -l x86_partition:/home/taste/esrocos_workspace/control/mc_watchdog-orig/BipEngine/lib/libengine.a"
+#echo "ORCHESTRATOR_OPTIONS=$ORCHESTRATOR_OPTIONS"
