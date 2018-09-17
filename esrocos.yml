@@ -2,4 +2,5 @@ ASNACN_DIR: dataview/
 PROJECT_NAME: mc_watchdog
 deps:
 - types/base: ''
+- control/mc_watchdog: ''
 
