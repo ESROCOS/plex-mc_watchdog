@@ -37,7 +37,7 @@ esrocos_add_dependency(PARTITION x86_partition
 ########### FOR COMPONENT PROJECTS ################
 
 #uncomment if you want to export a function
-esrocos_export_function("Watchdog" "plex/watchdog")
+esrocos_export_function("Watchdog" "share/taste_components/watchdog")
 
 #uncomment to export PKG-CONFIG-file
 esrocos_export_pkgconfig( VERSION 1.0
